@@ -1,10 +1,16 @@
 To begin, it is best to start off with a sample script, to save you the trouble of having to establish the basic structure. I recommend taking the script for the Tatra tram, as it already includes all files and references necessary for a basic, movable train. As a basic requisit, I assume you already have downloaded and extracted the Metrostroi script addon.
 
+Navigate to your Garry's Mod addon folder.
+
+Create a new folder by whatever name you choose. This is going to be your work folder into which you copy all the files we're going to mention next. 
+
+Within your work folder, create a ``lua`` folder. And within that, create ``entities`` and ``metrostroi/systems``.
+
 The scripts can be found in the extracted Metrostroi addon folder under ``lua/entities/gmod_subway_tatra_t3``.
 
-Copy them into a new folder with the naming pattern ``gmod_subway_`` followed by whatever name you desire and make sure the folder you create sits in ``lua/entities``.
+Copy them into a new folder with the naming pattern ``gmod_subway_`` followed by whatever name you desire and make sure the folder you create sits in ``[workfolder]/lua/entities``.
 
-We also need to go and fetch its systems file. Go to ``lua/metrostroi/systems/`` and copy ``sys_tatra_systems.lua`` into the same folder you're taking it from. Rename it ``sys_`` followed by whatever name you choose.
+We also need to go and fetch its systems file. From your metrostroi copy, go to ``lua/metrostroi/systems/`` and copy ``sys_tatra_systems.lua`` into the same folder you're taking it from. Rename it ``sys_`` followed by whatever name you choose.
 
 Open the file in your preferred text editor (do NOT torture yourself by using a standard editor like Notepad, use a better one like Notepad++ or even VSCodium) and look for the line containing ``DefineSystem`` and change the string in the parentheses to anything you wish. It's probably best to make it relevant to your train though.
 
