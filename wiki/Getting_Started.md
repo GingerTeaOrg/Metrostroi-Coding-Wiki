@@ -1,4 +1,4 @@
-To begin, it is best to start off with a sample script, to save you the trouble of having to establish the basic structure. I recommend taking the script for the Tatra tram, as it already includes all files and references necessary for a basic, movable train. As a basic requisit, I assume you already have either cloned the metrostroi beta repo, or that you've downloaded and extracted the Metrostroi script addon.
+To begin, it is best to start off with a sample script, to save you the trouble of having to establish the basic structure. I recommend taking the script for the Tatra tram, as it already includes all files and references necessary for a basic, movable train. As a basic requisit, I assume you already have downloaded and extracted the Metrostroi script addon.
 
 The scripts can be found in the extracted Metrostroi addon folder under ``lua/entities/gmod_subway_tatra_t3``.
 
