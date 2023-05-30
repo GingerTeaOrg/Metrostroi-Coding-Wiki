@@ -128,7 +128,7 @@ Turns a preset light on and off.
 
 ## self:SetNW2Int
 
-Same as [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt).
+Same as [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt). Actually there is slight difference between SetNW.. and SetNW2.. functions. SetNW.. makes the network variable to be broascasted every 10 seconds, while SetNW2.. broadcasts it only once when the variable's value has been changed
 
 
 
