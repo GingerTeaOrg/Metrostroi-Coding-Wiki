@@ -16,7 +16,7 @@ jobs:
             with:
                 username: lillywho
                 access_token: ${{ secrets.GITHUB_TOKEN }}
-                wiki_folder: /home/github/wiki
+                wiki_folder: wiki
                 commit_username: 'lillywho'
                 commit_email: 'lillywho@users.noreply.github.com'
                 commit_message: 'action: wiki sync'
