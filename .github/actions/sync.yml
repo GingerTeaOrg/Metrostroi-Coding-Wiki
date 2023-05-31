@@ -1,0 +1,2 @@
+- name: Wiki Sync
+  uses: JoeIzzard/ghaction-wiki-sync@v1
