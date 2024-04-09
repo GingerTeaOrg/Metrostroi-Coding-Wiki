@@ -128,7 +128,7 @@ Turns a preset light on and off.
 
 ## self:SetNW2Int
 
-Same as [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt). Actually there is slight difference between SetNW.. and SetNW2.. functions. SetNW.. makes the network variable to be broascasted every 10 seconds, while SetNW2.. broadcasts it only once when the variable's value has been changed
+Same as [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt) except for a slight difference. SetNW.. makes the network variable to be broascasted every 10 seconds, while SetNW2.. broadcasts it only once when the variable's value has been changed
 
 
 
@@ -284,11 +284,12 @@ ENT.MirrorCams = {
 
 ## function ENT:InitializeSystems
 
-Tells the train which systems to load.
+Tells the train which systems to load. If you use two strings as arguments, you can create alias names for your systems,
 
 ```lua
 function ENT:InitializeSystems()
 	self:LoadSystem("Duewag_U2")
+	self:LoadSystem("MyCustomSysName","MySys")
 	self:LoadSystem("Duewag_Deadman")
 	self:LoadSystem("IBIS")
 	self:LoadSystem("Duewag_Battery")
