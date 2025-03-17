@@ -53,8 +53,9 @@ This seems to draw a segment display number. Probably used on those trains with 
 
 
 ## function ENT:DrawOnPanel(index,func,overr)   
+This draws any 2D rendering context on a ButtonMap panel. I've used it for things like drawing rollsigns and LED displays. This only works in the ENT:DrawPost() function on Metrostroi trains, which is executed as a rendering hook.
+![image](https://github.com/user-attachments/assets/7b5ee9d8-2dfc-410d-9d7e-ac18ec1507ad)
 
-> TODO   
 
 
 
@@ -62,12 +63,6 @@ This seems to draw a segment display number. Probably used on those trains with 
 ## function ENT:DrawRTOnPanel(index,rt,overr)   
 
 > TODO
-
-
-
-## self:DrawOnPanel(index,func,overr)
-
-Internal function for drawing something onto a panel. Can presumably be used to develop your own functions that could do some arbitrary 2D rendering.
 
 
 
