@@ -8,7 +8,8 @@ Within your work folder, create a ``lua`` folder. And within that, create ``enti
 
 The scripts can be found in the extracted Metrostroi addon folder under ``lua/entities/gmod_subway_tatra_t3``.
 
-Copy them into a new folder with the naming pattern ``gmod_subway_`` followed by whatever name you desire and make sure the folder you create sits in ``[workfolder]/lua/entities``.
+Copy them into a new folder with the naming pattern ``gmod_subway_`` followed by whatever name you desire and make sure the folder you create sits in ``[workfolder]/lua/entities``. *NOTE: Unless you're planning to write a hook that defines your train as a Metrostroi train,
+the folder name absolutely needs to start with ``gmod_subway_``, as it defines the entity class name of your train. Metrostroi scans all possible entity classes on starting the game, and flags every entity with that prefix as a metro train. Without that flag, your train would not be reported by Metrostroi's pathing system, making it invisible to any built-in Metrostroi signalling.*
 
 We also need to go and fetch its systems file. From your metrostroi copy, go to ``lua/metrostroi/systems/`` and copy ``sys_tatra_systems.lua`` into the same folder you're taking it from. Rename it ``sys_`` followed by whatever name you choose.
 
