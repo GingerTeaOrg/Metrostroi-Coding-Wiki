@@ -1,0 +1,29 @@
+{
+  "menu": {
+    "item": "{{#levelRepeat}}  {{/levelRepeat}}* [{{{title}}}]({{{link}}})\n",
+    "category": "{{#levelRepeat}}  {{/levelRepeat}}* {{#link}}[{{{title}}}]({{{link}}}){{/link}}{{^link}}{{{title}}}{{/link}}\n{{{subitems}}}",
+    "category-1": "{{{subitems}}}\n"
+  },
+  "rules": {
+    "exclude": [
+      "Function Glossary.md"
+    ],
+    "order": [
+      "Getting Started.md",
+      "Alternate Power Supply.md",
+      "Animating Props.md",
+      "Articulated EMUs.md",
+      "Custom Add-On Entities.md",
+      "File Names and Paths.md",
+      "Lights.md",
+      "README.md",
+      "Required Tools.md",
+      "Sounds Setup and Usage.md"
+    ]
+  },
+  "separator": "Tutorials",
+  "linkTemplate": "./%s",
+  "menuFile": "_Sidebar.md",
+  "multilang": false,
+  "menuOnly": true
+}
