@@ -123,7 +123,7 @@ Turns a preset light on and off.
 
 ## self:SetNW2Int
 
-Same as [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt) except for a slight difference. SetNW.. makes the network variable to be broascasted every 10 seconds, while SetNW2.. broadcasts it only once when the variable's value has been changed
+Similar to [this](https://wiki.facepunch.com/gmod/Entity:SetNWInt) except for a slight difference. SetNW.. makes the network variable to be broascasted every 10 seconds, while SetNW2.. broadcasts it only once when the variable's value has been changed
 
 
 
@@ -213,6 +213,9 @@ This function sets an action for when a given button is released. Useful for but
 ## ENT.SkinType
 
 Accepts a string value. Set this to whatever name you're using in the skin registry script.
+![image](https://github.com/user-attachments/assets/770cb1bc-3481-4b1a-bc4a-192c3a0303d8)
+![image](https://github.com/user-attachments/assets/73f69f8a-fd4d-494d-8734-ee83628b2337)
+
 
 ## function ENT:PassengerCapacity()
 
