@@ -30,7 +30,7 @@ TODO: Find out what it does. Never used it before or seen it used.
 
 ## function ENT:CreateRT(name, w, h)
 
-Create a rectangle of a certain dimension. Used for things like the LCD screens.
+Create a rectangle render target of a certain dimension. Used for things like the LCD screens.
 
 > `name`: Name of the rectangle object   
 > `w`: Width   
@@ -81,7 +81,7 @@ Same as `self:GetNWInt`. Reads a networked integer from the server, if the NW2In
 
 ## self:GetPackedBool("name", fallback_value_bool)
 
- Same as [this](https://wiki.facepunch.com/gmod/Entity:GetNWBool). Sometimes used in place of the original function for _whatever reason_.
+ Same as [this](https://wiki.facepunch.com/gmod/Entity:GetNWBool). Sometimes used in place of the original function for _whatever reason_. You could just use the original function instead.
 
 
 
@@ -164,7 +164,7 @@ Forces the entity to update its textures. Useful if for whatever reason, skins a
 
 ## self:SetModel("modelname")
 
-Set model according to path that you pass as string, ie ``"models/lilly/uf/u2/u2h.mdl"``. Occurs in ``function ENT:Initialize()``. See your example script that you copied in "Getting Started".
+Set model according to path that you pass as string, ie ``"models/lilly/uf/u2/u2h.mdl"``. Occurs in ``function ENT:Initialize()``. See your example script that you copied in "Getting Started". Don't forget to include the ``.mdl`` file extension or else the model will not be found.
 
 ## function ENT:TrainSpawnerUpdate()
 
@@ -178,17 +178,17 @@ function ENT:TrainSpawnerUpdate()
 		
         self.FrontCouple:SetParameters() --get the coupler type from the variable
         self.RearCouple:SetParameters()
-		local tex = "Def_U2"
-		self:UpdateTextures()
-		--self:UpdateLampsColors()
-		self.FrontCouple.CoupleType = "U2" --ensures the couplers are the correct model`
-		self.RearCouple.CoupleType = "U2"
+	local tex = "Def_U2"
+	self:UpdateTextures()
+	--self:UpdateLampsColors()
+	self.FrontCouple.CoupleType = "U2" --ensures the couplers are the correct model`
+	self.RearCouple.CoupleType = "U2"
 end
 ```
 
 ## self:WriteTrainWire(num,value)
 
-Write to a train wire that will be available across all coupled units. This is your ticket to Multiple Unit operation. Expects an integer for `value`. I recommend keeping an excel sheet or txt somewhere that notes which wire number does what, because Metrostroi is sure as shite not going to tell you.
+Write to a train wire that will be available across all coupled units. This is your ticket to Multiple Unit operation. Expects an integer for `value`. I recommend keeping an excel sheet or txt somewhere that notes which wire number does what, because Metrostroi is sure as shite not going to tell you. Note that all units in a consists can write to a virtual wire, and the value each unit writes will aggregate to a final value. Therefore, when checking for an expected value, it's better to use "greater than" or "smaller than" operators rather than "equals".
 
 ## self:ReadTrainWire(num)
 
@@ -219,7 +219,7 @@ Accepts a string value. Set this to whatever name you're using in the skin regis
 
 ## function ENT:PassengerCapacity()
 
-Tells Metrostroi how many passengers your vehicle can accept. I'd recommend making this dependant on standing area.
+Tells Metrostroi how many passengers your vehicle can accept. I'd recommend making this dependant on standing area for optimal realism.
 
 ```lua
 function ENT:PassengerCapacity()
@@ -261,11 +261,11 @@ This is an array for defining where the cameras for the SHIFT + arrow keys are a
 
 ```lua
 ENT.Cameras = {
-    {Vector(480.5+17,-40,110),Angle(0,-90,0),"Train.UF_U2.Destinations"},
-    {Vector(407.5+10,6,100),Angle(0,180+5,0),"Train.UF_U2.PassengerStanding"},
+    	{Vector(480.5+17,-40,110),Angle(0,-90,0),"Train.UF_U2.Destinations"},
+    	{Vector(407.5+10,6,100),Angle(0,180+5,0),"Train.UF_U2.PassengerStanding"},
 	{Vector(70.5+10,6,100),Angle(0,0,0),"Train.UF_U2.PassengerStanding2"},
-    {Vector(490.5+90,0,150),Angle(0,180,0),"Train.Common.RouteNumber"},
-    {Vector(570,0,70),Angle(80,0,0),"Train.Common.CouplerCamera"},
+	{Vector(490.5+90,0,150),Angle(0,180,0),"Train.Common.RouteNumber"},
+	{Vector(570,0,70),Angle(80,0,0),"Train.Common.CouplerCamera"},
 }
 ```
 
@@ -307,3 +307,4 @@ ENT.SubwayTrain = {
 	Manufacturer = "Duewag",
 }
 ```
+You can expand this table with whatever info you need to track, of course. Metrostroi: Project Light Rail uses it to track things like Vmax, section type (a, b or c) and such.
